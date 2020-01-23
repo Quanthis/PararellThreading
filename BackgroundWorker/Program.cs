@@ -29,6 +29,7 @@ namespace BackgroundWorker
         {
             var options = new ParallelOptions();
             Parallel.Invoke(() => DoSomeWork(1), () => NiceHowAboutReading());
+            WriteLine("As you can see, you can still write in console although other threads are still working.");
             ReadKey();
         }
     }
